@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Caderno de Estudo</title>
+<meta name="description" content="Plano de estudo, registo de sessões, revisões e cartões de autoteste do 10.º T5.">
+<meta name="theme-color" content="#2E5B8A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Caderno">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icones/icone-192.png">
+<link rel="apple-touch-icon" href="icones/icone-180.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="top">
+  <h1>Caderno <span>10.º T5</span></h1>
+  <p id="hoje-data" class="muted"></p>
+</header>
+
+<main>
+  <section id="v-hoje" class="view" aria-label="Hoje"></section>
+  <section id="v-cal" class="view" aria-label="Calendário" hidden></section>
+  <section id="v-reg" class="view" aria-label="Registar" hidden></section>
+  <section id="v-tem" class="view" aria-label="Temas" hidden></section>
+  <section id="v-mais" class="view" aria-label="Mais" hidden></section>
+</main>
+
+<nav class="tabbar" aria-label="Secções">
+  <button data-v="hoje" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Hoje</button>
+  <button data-v="cal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Calendário</button>
+  <button data-v="reg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Registar</button>
+  <button data-v="tem"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg>Temas</button>
+  <button data-v="mais"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Mais</button>
+</nav>
+
+<dialog id="treino" aria-labelledby="treino-t"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="dados.js"></script>
+<script src="logica.js"></script>
+<script src="app.js"></script>
+<script src="ecras.js"></script>
+</body>
+</html>
